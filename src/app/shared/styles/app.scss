@@ -1,0 +1,164 @@
+// Cutoms Gray colors for theme
+$gray-darker:           #232735;
+$gray-dark:             #3a3f51;
+$gray:                  #dde6e9;
+$gray-light:            #e4eaec;
+$gray-lighter:          #edf1f2;
+
+// Custom brand colors for theme
+$inverse:               #131e26;
+$purple:                #7266ba;
+$pink:                  #f532e5;
+$yellow:                #fad732;
+$green:                 #37bc9b;
+
+$primary:               #5d9cec;
+$secondary:             #fff;
+$success:               #27c24c;
+$info:                  #23b7e5;
+$warning:               #ff902b;
+$danger:                #f05050;
+$dark:                  #3a3f51;
+
+// Custom color variants
+$amountOfLight: 10%;
+
+$primary-light:         lighten($primary, $amountOfLight);
+$success-light:         lighten($success, $amountOfLight);
+$info-light:            lighten($info, $amountOfLight);
+$warning-light:         lighten($warning, $amountOfLight);
+$danger-light:          lighten($danger, $amountOfLight);
+$inverse-light:         lighten($inverse, $amountOfLight);
+$green-light:           lighten($green, $amountOfLight);
+$pink-light:            lighten($pink, $amountOfLight);
+$purple-light:          lighten($purple, $amountOfLight);
+$yellow-light:          lighten($yellow, $amountOfLight);
+$primary-dark:          darken($primary, $amountOfLight);
+$success-dark:          darken($success, $amountOfLight);
+$info-dark:             darken($info, $amountOfLight);
+$warning-dark:          darken($warning, $amountOfLight);
+$danger-dark:           darken($danger, $amountOfLight);
+$inverse-dark:          darken($inverse, $amountOfLight);
+$green-dark:            darken($green, $amountOfLight);
+$pink-dark:             darken($pink, $amountOfLight);
+$purple-dark:           darken($purple, $amountOfLight);
+$yellow-dark:           darken($yellow, $amountOfLight);
+
+// Theme variables
+
+// used for sidebars and content spacing
+$navbar-height:                    55px;
+$footer-hg: $navbar-height;
+$content-padding: 15px;
+$side-wd: 180px;
+
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    //direction: ltr;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: $gray;
+}
+
+.topnavbar-wrapper {
+    background-color: $purple;
+    width: 100%;
+    height: $navbar-height;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.topnavbar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: $gray-lighter;
+}
+
+.nav-header {
+    width: $side-wd;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.nav-itens {
+    width: $side-wd;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li {
+        float: left;
+        padding: 15px;
+    }
+    li a {
+        display: block;
+        color: $gray-lighter;        
+        text-align: center;
+        text-decoration: none;
+    }
+    li a:hover {
+        color: $gray-light;
+    }    
+}
+
+.section-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: $navbar-height;
+    margin-left: 0; // overflow: hidden;
+    //z-index: $z-index-main-section;
+    //background-color: $content-bg;
+    margin-bottom: $footer-hg !important; // ensure a space for the footer
+
+}
+
+.content-wrapper {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    padding: 15px;
+    width: 95em; // styling to visually wrap the component
+    border: 1px solid $gray-light;
+    background-color: $gray-lighter;
+}
+
+.footer-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $footer-hg;
+    border-top: 1px solid $gray-light;
+    padding: $content-padding;
+    //z-index: $z-index-main-section - 2;
+    font-size: .875rem;
+    p {
+        margin: 0;
+    }
+}
