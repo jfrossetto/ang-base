@@ -1,25 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
-import { UsuariosModule } from './usuarios/usuarios.module';
+import { CadastroComponent } from './cadastro/cadastro.component';
 import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
-  { 
-    path: '', redirectTo: 'usuarios', pathMatch: 'full' ,
-    children: [
-      { path: 'usuarios', loadChildren: () => import('./usuarios/usuarios.module').then(m => m.UsuariosModule) }
-    ]
-  }
+  { path: '',  component: CadastroComponent }
 ];
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CadastroComponent],
   imports: [
     CommonModule,
     SharedModule,
-    UsuariosModule,    
     RouterModule.forChild(routes)
   ]
 })

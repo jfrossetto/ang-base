@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LayoutStoreService } from '../../../stores/layout-store.service'
 
 @Component({
   selector: 'app-usuario-container',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public layoutStore: LayoutStoreService) { }
 
   ngOnInit(): void {
+    this.layoutStore.crudModoLista();
   }
 
 }

@@ -1,1 +1,16 @@
-<p>usuario-crud works!</p>
+<div> 
+    <p> crud usuarios </p>
+    <div > 
+        <p> modo: {{layoutState}}</p>
+
+        <div *ngIf="layoutState === 'lista' ">
+            <app-usuario-list></app-usuario-list>
+        </div>
+
+        <div *ngIf="layoutState === 'edit' ">
+            <app-usuario-edit></app-usuario-edit>
+        </div>
+        
+    </div>
+</div>
+

@@ -9,7 +9,8 @@ export const routes: Routes = [
         children: [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', loadChildren: () => import('./modulos/modulos.module').then(m => m.ModulosModule) },
-            { path: 'cadastro', loadChildren: () => import('./cadastros/cadastros.module').then(m => m.CadastrosModule) }
+            { path: 'cadastro', loadChildren: () => import('./cadastros/cadastros.module').then(m => m.CadastrosModule) },
+            { path: 'cadastro/usuarios', loadChildren: () => import('./cadastros/usuarios/usuarios.module').then(m => m.UsuariosModule) }
         ]
     },
 
